@@ -123,8 +123,8 @@ static const char *colorname[] = {
 	/* more colors can be added after 255 to use with DefaultXX */
 	"#cccccc", /* 256 -> cursor */
 	"#555555", /* 257 -> reverse cursor */
-	"#FFFFFF", /* 258 -> foreground */
-	"#000000", /* 259 -> background  111111*/
+	"#E0E3E5", /* 258 -> foreground */
+	"#191919", /* 259 -> background  111111*/
 };
 
 
@@ -485,3 +485,4 @@ static char ascii_printable[] =
 	" !\"#$%&'()*+,-./0123456789:;<=>?"
 	"@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_"
 	"`abcdefghijklmnopqrstuvwxyz{|}~";
+
