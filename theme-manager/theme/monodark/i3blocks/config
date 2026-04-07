@@ -1,29 +1,27 @@
 # i3blocks configuration inspired by i3status
 
-
 [song]
 command=$HOME/.config/i3blocks/scripts/song.sh
 interval=1
 color=#3D5AFE
 
-
 [volume]
 command=$HOME/.config/i3blocks/scripts/get-volume.sh
 interval=1
-color=#3D5AFE
+label=
 
 
 [wireless]
 command=ip route | grep '^default' | awk '{print $9}'
 interval=10
 label=[+]
-color=#009b6a
+color=#262828
 
 [battery]
 command=$HOME/.config/i3blocks/scripts/battery.sh
 interval=30
 label= [+]
-color=#009b6a
+color=#262828
 
 [brightness]
 command=$HOME/.config/i3blocks/scripts/brightnessctl.sh
@@ -43,8 +41,6 @@ label=
 # [memory]
 # command=free -h | awk '/Mem.:/ {print " USED " " ~ " $3, " / " " FREE " " ~ " $7}' 
 # interval=10
-
-
 
 
 [time]

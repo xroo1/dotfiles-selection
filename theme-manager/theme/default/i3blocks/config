@@ -1,5 +1,17 @@
 # i3blocks configuration inspired by i3status
 
+[song]
+command=$HOME/.config/i3blocks/scripts/song.sh
+interval=1
+color=#3D5AFE
+
+[volume]
+command=$HOME/.config/i3blocks/scripts/get-volume.sh
+interval=1
+color=#3D5AFE
+label=
+
+
 [wireless]
 command=ip route | grep '^default' | awk '{print $9}'
 interval=10
@@ -32,10 +44,7 @@ label=
 # interval=10
 
 
-[volume]
-command=$HOME/.config/i3blocks/scripts/get-volume.sh
-interval=1
-label=
+
 
 [time]
 command=date '+%Y-%m-%d %H:%M:%S'

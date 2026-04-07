@@ -1,30 +1,25 @@
 #!/bin/bash
 
-# Cores para output
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
 BLUE='\033[0;34m'
 NC='\033[0m'
 
-# Diretórios do projeto
 PROJECT_DIR="$HOME/.config/theme-manager"
 THEMES_DIR="$PROJECT_DIR/theme"
 SRC_DIR="$PROJECT_DIR/src"
 BACKUP_ROOT_DIR="$HOME/.config/backups_theme_manager"
 
-# Variáveis globais
 BACKUP_ALL=false
 SKIP_ALL=false
 CURRENT_BACKUP_SESSION=""
 
-# Funções de mensagem
 print_msg() { echo -e "${GREEN}[INFO]${NC} $1"; }
 print_err() { echo -e "${RED}[ERROR]${NC} $1"; }
 print_warn() { echo -e "${YELLOW}[WARNING]${NC} $1"; }
 print_header() { echo -e "${BLUE}=== $1 ===${NC}"; }
 
-# Criar sessão de backup
 create_backup_session() {
     local timestamp=$(date +%Y%m%d_%H%M%S)
     CURRENT_BACKUP_SESSION="$BACKUP_ROOT_DIR/backup_$timestamp"
@@ -32,7 +27,6 @@ create_backup_session() {
     print_msg "Sessão de backup: $CURRENT_BACKUP_SESSION"
 }
 
-# Backup de configuração
 backup_config() {
     local config_name="$1"
     local config_path="$HOME/.config/$config_name"
@@ -46,7 +40,6 @@ backup_config() {
     return 0
 }
 
-# Backup interativo
 backup_interactive() {
     local config_name="$1"
     
@@ -72,7 +65,6 @@ backup_interactive() {
     esac
 }
 
-# Aplicar background com feh
 apply_background() {
     local bg_file="$1"
     
@@ -149,7 +141,6 @@ apply_theme() {
     
     # Aplica background
     apply_background "$theme_path/background"
-    apply_st
 
     # Copia configurações
     for item in "$theme_path"/*; do
@@ -175,7 +166,9 @@ apply_theme() {
         print_msg "Backup salvo em: $CURRENT_BACKUP_SESSION"
         print_msg "Total: $count configurações"
     fi
-  
+ 
+    apply_st
+
     print_msg "Reiniciando o i3"
     i3-msg restart
 
