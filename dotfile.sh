@@ -303,7 +303,7 @@ create_theme() {
             
             cat > "$theme_path/background" << EOF
 #!/bin/sh
-feh --no-fehbg --bg-scale '$bg_dest'
+feh  --bg-scale '$bg_dest'
 EOF
             chmod +x "$theme_path/background"
             print_msg "Background adicionado!"
@@ -322,7 +322,7 @@ create_default_background() {
     cat > "$SRC_DIR/background" << 'EOF'
 #!/bin/sh
 # Background padrão - Edite o caminho da imagem
-feh --no-fehbg --bg-scale '/home/usuario/.config/backgrounds/default.jpg'
+feh --bg-scale '/home/usuario/.config/backgrounds/default.jpg'
 EOF
     chmod +x "$SRC_DIR/background"
     print_msg "Background padrão criado em $SRC_DIR/background"
