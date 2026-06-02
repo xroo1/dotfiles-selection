@@ -80,6 +80,9 @@ install_dotfile() {
       fc-cache -v ~/.fonts/
       
       ;;
+    *)
+      print_warn "The dotfile fonts were bot applied."
+      ;;
   esac
 }
 
