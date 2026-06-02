@@ -1,0 +1,8 @@
+#!/bin/sh
+# Background padrão - altere para sua imagem padrão
+# Exemplo: feh --no-fehbg --bg-scale '/caminho/para/sua/imagem.jpg'
+
+# Se você tiver uma imagem padrão, descomente a linha abaixo e ajuste o caminho
+# feh --no-fehbg --bg-scale '/home/usuario/.config/backgrounds/default.jpg'
+
+echo "Configure seu background padrão editando: ~/.config/theme-manager/src/background"
