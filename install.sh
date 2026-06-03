@@ -95,18 +95,6 @@ setup_dotfile() {
 }
 
 
-install_dotfile_selection() {
-  print_msg "Iniciando instalação"
-  cp -v ./theme-manager -r ~/.config
-  cp -v ./src/* -r ~/.config
-
-  print_msg "Dando Permição de executavel para o dotfile.sh"
-  chmod +x ./dotfile.sh
-
-  print_msg "Executando o script do dotfile."
-  ./dotfile.sh
-}
-
 main() {
   setup_dotfile
 }
