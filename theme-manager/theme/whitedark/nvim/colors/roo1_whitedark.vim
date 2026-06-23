@@ -168,6 +168,59 @@ highlight! link NERDTreeClosable Directory
 highlight! link NERDTreeExecFile String
 highlight! link NERDTreeLinkTarget Type
 
+
+" -----------------------------------------------------------
+" Neo-tree (explorador do AstroNvim) - Versão harmoniosa clara
+" -----------------------------------------------------------
+" Fundo principal do explorador (tom mais escuro que o main, porém claro)
+highlight NeoTreeNormal       guibg=#262828 guifg=#C0C7CA
+highlight NeoTreeNormalNC     guibg=#262828 guifg=#5C646B
+highlight NeoTreeFloatNormal  guibg=#262828 guifg=#3B4147
+highlight NeoTreeWinSeparator guibg=#262828 guifg=#262828
+
+" Fundo do título e cabeçalho (um pouco mais escuro para contraste)
+highlight NeoTreeTitleBar     guibg=#2b2d2d guifg=#4A90C4
+highlight NeoTreeHeader       guibg=#2b2d2d guifg=#4A90C4
+highlight NeoTreeHeaderTitle  guibg=#2b2d2d guifg=#4A90C4
+
+" Fundo do rodapé
+highlight NeoTreeFooter       guibg=#262828 guifg=#8B939A
+highlight NeoTreeStatusLine   guibg=#262828 guifg=#5C646B
+highlight NeoTreeEndOfBuffer  guibg=#262828 guifg=#D5DAE0
+
+" Scrollbar
+highlight NeoTreeScrollbar    guibg=#2b2d2d guifg=#A9B0B7
+highlight NeoTreeScrollbarThumb guibg=#8B939A
+
+" Linha do cursor (mais clara para destaque)
+highlight NeoTreeCursorLine   guibg=#2d2f2f
+
+" Ícones e nomes de diretórios (cores do tema)
+highlight NeoTreeDirIcon      guifg=#4A90C4 guibg=NONE
+highlight NeoTreeDirectoryName guifg=#4A90C4 guibg=NONE gui=bold
+highlight NeoTreeFileName     guifg=#C0C7CA guibg=NONE
+highlight NeoTreeFileNameOpened guifg=#4A90C4 guibg=NONE gui=bold
+
+" Git status (cores suaves do tema)
+highlight NeoTreeGitAdded     guifg=#5A9A8A guibg=NONE
+highlight NeoTreeGitModified  guifg=#4A90C4 guibg=NONE
+highlight NeoTreeGitDeleted   guifg=#8A8ABF guibg=NONE
+highlight NeoTreeGitIgnored   guifg=#8B939A guibg=NONE
+
+" Marcadores de indentação (sutis)
+highlight NeoTreeIndentMarker guifg=#A9B0B7 guibg=NONE
+
+" Mensagens e avisos
+highlight NeoTreeMessage      guifg=#4A90C4 guibg=NONE
+highlight NeoTreeInfo         guifg=#5A9A8A guibg=NONE
+highlight NeoTreeWarn         guifg=#6BA5D1 guibg=NONE
+highlight NeoTreeError        guifg=#8A8ABF guibg=NONE
+
+" Popups e menus
+highlight NeoTreePopup        guibg=#C8CDD4 guifg=#3B4147
+highlight NeoTreePopupBorder  guibg=#C8CDD4 guifg=#4A90C4
+
 " Garantir que o tema seja aplicado completamente
 set termguicolors
+
 
